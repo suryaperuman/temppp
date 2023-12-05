@@ -138,6 +138,9 @@ public class ParticipantActivityEvents extends AppCompatActivity implements Adap
                             }
                         }
                     }
+                    ClubListEvent eventAdapter = new ClubListEvent(ParticipantActivityEvents.this, clubHelperClassEvents);
+                    eventAdapter.searchDataList(searchList);
+
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -145,8 +148,7 @@ public class ParticipantActivityEvents extends AppCompatActivity implements Adap
                 }
             });
 
-        }ClubListEvent eventAdapter = new ClubListEvent(ParticipantActivityEvents.this, clubHelperClassEvents);
-        eventAdapter.searchDataList(searchList);
+        }
     }
 
 
